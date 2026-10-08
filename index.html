@@ -13,19 +13,17 @@
     <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
 
     <header class="site-header">
-      <div class="container">
+      <div class="container header-inner">
         <div class="title-wrap">
           <p class="eyebrow">Encontro litúrgico</p>
           <h1>Liturgia — “Faça-se em mim segundo a tua palavra”</h1>
           <p class="subtitle">Deus age, nós participamos.</p>
         </div>
 
-        <div class="header-actions" aria-label="Ações da página">
-          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar entre tema claro e escuro">
-            <span class="theme-icon" aria-hidden="true">☀️</span>
-            <span class="theme-label">Tema</span>
-          </button>
-        </div>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Alternar entre tema claro e escuro">
+          <span class="theme-icon" aria-hidden="true">☀️</span>
+          <span class="theme-label">Tema</span>
+        </button>
       </div>
     </header>
 
@@ -88,21 +86,5 @@
         </div>
       </article>
     </template>
-
-    <script>
-      (() => {
-        try {
-          const saved = localStorage.getItem('liturgia-notes');
-          if (saved) {
-            document.addEventListener('DOMContentLoaded', () => {
-              const notes = document.getElementById('notes');
-              if (notes) notes.value = saved;
-            });
-          }
-        } catch (error) {
-          console.warn('Não foi possível ler as anotações salvas.', error);
-        }
-      })();
-    </script>
   </body>
 </html>
